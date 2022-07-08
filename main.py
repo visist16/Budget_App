@@ -112,6 +112,13 @@ class Category:
         return True
       return False
 
+def check_funds(self,amount):
+      """
+      A check_funds method that accepts an amount as an argument. It returns False if the amount is greater than the balance of the budget category and returns True otherwise. This method should be used by both the withdraw method and transfer method
+      """
+      if(self.get_balence() >= amount):
+        return True
+      return False
 
   
   ### Category method
