@@ -121,6 +121,14 @@ def check_funds(self,amount):
       return False
 
   
+  ### Category method
+  def get_withdrawls(self):
+      total = 0
+      for item in self.ledger:
+          if item["amount"] < 0:
+              total+= item["amount"]
+      return total             
+
 
 
 
